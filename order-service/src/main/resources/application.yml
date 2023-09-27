@@ -22,11 +22,12 @@ spring:
             dataId: orderservice-flow-rules
             groupId: SENTINEL_GROUP
             rule-type: flow # 还可以是：degrade、authority、param-flow
+
 #      discovery:
 #        namespace: 4d6ce343-9e1b-44df-a90f-2cf2b6b3d177 # dev环境
 #        ephemeral: false # 是否是临时实例
 mybatis:
-  type-aliases-package: cn.itcast.user.pojo
+  type-aliases-package: junw.orderservice.pojo
   configuration:
     map-underscore-to-camel-case: true
 logging:

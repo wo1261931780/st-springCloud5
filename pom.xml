@@ -9,10 +9,10 @@
 	<description>Demo project for Spring Boot</description>
 	<modules>
 		<module>user-service</module>
-				<module>order-service</module>
-				<module>eureka-server</module>
-				<module>feign-api</module>
-				<module>gateway</module>
+		<module>order-service</module>
+		<module>eureka-server</module>
+		<module>feign-api</module>
+		<module>gateway</module>
 	</modules>
 	
 	<packaging>pom</packaging>
