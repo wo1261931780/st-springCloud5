@@ -29,10 +29,12 @@ public class SentinelExceptionHandler {
 //		} else if (e instanceof AuthorityException) {
 //			msg = "没有权限访问";
 //			status = 401;
+// 	这里401是固定的错误码
 //		}
 //
 //		response.setContentType("application/json;charset=utf-8");
 //		response.setStatus(status);
+// 	写入返回体的操作
 //		response.getWriter().println("{\"msg\": " + msg + ", \"status\": " + status + "}");
 //	}
 }

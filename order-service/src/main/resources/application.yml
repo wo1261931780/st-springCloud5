@@ -15,6 +15,7 @@ spring:
       transport:
         dashboard: localhost:8080 # sentinel控制台地址
       web-context-unify: false # 关闭context整合，不关闭的话，会认为是一个应用
+      # 关闭以后，可以在sentinel控制台看到多个应用
       datasource:
         flow:
           nacos:
@@ -22,6 +23,12 @@ spring:
             dataId: orderservice-flow-rules
             groupId: SENTINEL_GROUP
             rule-type: flow # 还可以是：degrade、authority、param-flow
+        degrade: # 熔断降级，可以配置多个
+          nacos:
+            server-addr: localhost:8848 # nacos地址
+            dataId: orderservice-flow-rules
+            groupId: SENTINEL_GROUP
+            rule-type: degrade # 还可以是：degrade、authority、param-flow
 
 #      discovery:
 #        namespace: 4d6ce343-9e1b-44df-a90f-2cf2b6b3d177 # dev环境
@@ -54,3 +61,4 @@ feign:
     max-connections-per-route: 50 # 单个路径的最大连接数
   sentinel:
     enabled: true # 开启feign对sentinel的支持
+#    然后我们就可以开始写类

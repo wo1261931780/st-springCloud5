@@ -9,13 +9,14 @@ import org.springframework.context.annotation.Bean;
  * @author 64234
  */
 public class DefaultFeignConfiguration {
-    @Bean
-    public Logger.Level logLevel(){
-        return Logger.Level.BASIC;
-    }
+	@Bean
+	public Logger.Level logLevel() {
+		return Logger.Level.BASIC;
+	}
 
-    @Bean
-    public UserClientFallbackFactory userClientFallbackFactory(){
-        return new UserClientFallbackFactory();
-    }
+	@Bean
+	public UserClientFallbackFactory userClientFallbackFactory() {
+		return new UserClientFallbackFactory();
+	}
+	// 第二步，将其注册为一个对象
 }
